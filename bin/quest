@@ -1,0 +1,13 @@
+#BSD 3-Clause License
+#
+#Copyright (c) 2019, Kenneth Andrews, Nelson Caudill
+#All rights reserved.
+
+require_relative '../lib/initializer.rb'
+require 'pry'
+sword = Longsword.new
+dice = Dice.new
+guy = Character.new('guy')
+baddy = Character.new('Mr. Evil')
+binding.pry
+
