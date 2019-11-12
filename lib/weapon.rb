@@ -1,11 +1,8 @@
 class Weapon
-  
-  def damage(enemy, dice)
-    @dice_sides = @stats[:damage]
-    @number_of_dice = @stats[:dice]
-    @critical = @stats[:critical]
+
+  def damage(enemy)
     
-    enemy.take_damage(dice.roll(@dice_sides, @number_of_dice))
+    enemy.take_damage($dice.roll(@damage, @dice))
   end
 
 end

@@ -1,7 +1,7 @@
 class Dice
   
-  def roll(number_of_dice) 
-    @max_sides = number_of_dice * @sides
+  def roll(dice_sides, number_of_dice=1) 
+    @max_sides = number_of_dice * dice_sides 
     rand(1..@max_sides)
   end
 
