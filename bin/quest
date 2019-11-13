@@ -1,13 +1,21 @@
 #BSD 3-Clause License
 #
+#
 #Copyright (c) 2019, Kenneth Andrews, Nelson Caudill
 #All rights reserved.
 
 require_relative '../lib/initializer.rb'
 require 'pry'
+
 sword = Longsword.new
-$dice = Dice.new
+
 guy = Character.new('guy')
 baddy = Character.new('Mr. Evil')
-binding.pry
 
+_1d2 = Dice.new(2)
+_11d4 = Dice.new(4)
+_1d6 = Dice.new(4)
+_1d8 = Dice.new(8,2)
+_1d20 = Dice.new(20)
+
+binding.pry

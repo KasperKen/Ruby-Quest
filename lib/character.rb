@@ -5,7 +5,7 @@ class Character
     @max_health = 100
     @current_health = @max_health 
     @inventory = [] 
-    @equipped_weapon = 'fists' 
+    @equipped_weapon = 'fsts' 
     @race = 'Human' 
   end
   

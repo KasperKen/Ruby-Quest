@@ -1,8 +1,13 @@
 class Dice
-  
-  def roll(dice_sides, number_of_dice=1) 
-    @max_sides = number_of_dice * dice_sides 
-    rand(1..@max_sides)
+   
+  def initialize(dice_sides, dice_ammount=1) 
+    @sides = dice_sides 
+    @ammount = dice_ammount
+  end
+     
+  def roll
+    total = @ammount * @sides 
+    rand(1..total)
   end
 
 end
