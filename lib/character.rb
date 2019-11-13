@@ -1,6 +1,6 @@
 class Character
 
-  attr_acceusor :max_health, :current_health, :inventory, :weapon
+  attr_accessor :max_health, :current_health, :inventory, :weapon
 
   def initialize(name, weapon)
     @name = name
