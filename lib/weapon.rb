@@ -1,12 +1,14 @@
 class Weapon
-  
-  attr_accessor :dice, :damage, :critical, :weapon_type, :weight
- 
-  
 
-#  def attack(enemy)
-  # ,
-#    enemy.current_health -= (Dice.create_dice(@damage, @dice))
-#  end
-#
+  attr_accessor :name, :damage
+
+  def initialize(name, dmg)
+    @name = name
+    @damage = dmg
+  end
+
+  def damage
+    @damage.roll
+  end
+
 end
