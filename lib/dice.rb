@@ -5,7 +5,7 @@ class Dice
   def initialize(dice_sides, dice_ammount=1) 
     @sides = dice_sides 
     @ammount = dice_ammount
-    @name = "#{dice_ammount}d#{dice_sides}"
+    @name = "#{dice_ammount}d#{dice_sides}" #ex. '2d4'
     @@list << self
   end
    

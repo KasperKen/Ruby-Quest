@@ -1,6 +1,6 @@
 class Character
 
-  attr_accessor :max_health, :current_health, :inventory, :weapon
+  attr_acceusor :max_health, :current_health, :inventory, :weapon
 
   def initialize(name, weapon)
     @name = name
@@ -15,15 +15,7 @@ class Character
     Class.paladin
   end
 
- # I'm hoping to replace this working method with attr_accessor
- # def add_to_inventory(item, new_ammount)
- #   if @inventory[item]
- #     @inventory[item] += new_ammount
- #   else
- #     @inventory[item] = new_ammount
- #   end
- # end
-
+  # Calls on weapon damage which returns a dice roll
   def attack(enemy)
     dmg = @weapon.damage
     enemy.current_health -= dmg
