@@ -7,15 +7,17 @@
 require_relative '../lib/initializer.rb'
 require 'pry'
 
-sword = Longsword.new
-
-guy = Character.new('guy')
-baddy = Character.new('Mr. Evil')
-
-_1d2 = Dice.new(2)
-_11d4 = Dice.new(4)
+#Initialize Dice First
+_1d4 = Dice.new(4)
 _1d6 = Dice.new(4)
-_1d8 = Dice.new(8,2)
+_2d8 = Dice.new(8,2)
 _1d20 = Dice.new(20)
+
+#Initialize Weapons
+longsword = Weapon.new('Longsword',_2d8)
+fists = Weapon.new('Fists', _1d4)
+#Initialize Characters
+hero = Character.new('guy', longsword)
+baddy = Character.new('Mr. Evil', fists)
 
 binding.pry
