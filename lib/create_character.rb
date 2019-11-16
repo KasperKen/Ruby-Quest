@@ -6,6 +6,9 @@ class CreateCharacter
     self.get_name
     self.get_race
     self.get_class
+    #Im still trying to figure out how to
+    #create an object from the character class
+    #whithin a method from this instance
     Character.new(@name, @race, @class)
   end
 
