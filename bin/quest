@@ -20,4 +20,7 @@ fists = Weapon.new('Fists', _1d4)
 hero = Character.new('guy', longsword)
 baddy = Character.new('Mr. Evil', fists)
 
+health_potion = {name: "Health", dice: _1d4, stat: :hp}
+hp = Item.new(health_potion)
+
 binding.pry
