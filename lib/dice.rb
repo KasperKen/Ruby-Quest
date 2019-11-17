@@ -18,4 +18,9 @@ class Dice
     rand(1..total)
   end
 
+  def self.stat_roll
+    roll4d6 = [rand(1..6), rand(1..6),  rand(1..6), rand(1..6)]
+    roll4d6.sum - roll4d6.min # Discard lowest roll
+  end
+
 end
