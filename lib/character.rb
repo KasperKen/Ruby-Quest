@@ -5,22 +5,14 @@ class Character
   def initialize(name, weapon)
     @name = name
     @max_health = 100
-    @stats = roll_stats
+    @stats = self.inital_stats 
     @inventory = {}
     @weapon = weapon
     @race = 'Human'
   end
 
-  def roll_stats
-    {
-      :hp => 100,
-      :str => Dice.stat_roll,
-      :dex => Dice.stat_roll,
-      :con => Dice.stat_roll,
-      :wis => Dice.stat_roll,
-      :int => Dice.stat_roll,
-      :cha => Dice.stat_roll
-    }
+  def inital_stats
+    @stats = CreateCharacter.roll_stats 
   end
 
   def add_item(item, count = 1)
@@ -43,7 +35,7 @@ class Character
   # Calls on weapon damage which returns a dice roll
   def attack(enemy)
     dmg = @weapon.damage
-    enemy.current_health -= dmg
+    enemy.stats[:hp] -= dmg
   end
 
 end
