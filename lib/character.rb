@@ -8,7 +8,7 @@ class Character
     @race = 'Human'
     @klass = 'Paladin'
     @max_health = 100
-    @stats = roll_stats
+    @stats = self.inital_stats 
     @inventory = {}
     @weapon = weapon
   end
@@ -22,9 +22,13 @@ class Character
       :wis => Dice.stat_roll,
       :int => Dice.stat_roll,
       :cha => Dice.stat_roll,
-      :modifier => 1, # Place holder so game won't break. Eventually will be set by Character's Klass
-      :ac => 1 # Will also be some math based off DEX/CON + equipment. According to Klass specs
+      :modifier => 1, # Place holder so game won't break. Eventually will be set by Character's Class
+      :ac => 1 # Will also be some math based off DEX/CON + equipment. According to Class specs
     }
+    
+  #def inital_stats <<< Stats are now calculated in the create character class. I've commented out so I don't break your merge. I'll fix it later
+   # @stats = CreateCharacter.roll_stats 
+
   end
 
   def add_item(item, count = 1)

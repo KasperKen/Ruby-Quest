@@ -1,35 +1,9 @@
-require 'pry'
+class Character_Class 
 
-class Paladin < Human
-  
-  def initialize(name)
-    @health = 100
-    @weapons = {}
-    @name = name
-    @stamina = 100
-  end
+  attr_accessor :class_name, :stat_bonus
 
-  def health
-    @health
-  end
-  
-  def add_weapon(weapon, category) 
-      @weapons[category] = weapon
-  end
-
-  def weapons
-    @weapons
-  end
-  
-  def attack(person, ammount=5)
-    person.damage(ammount)
-    @stamina -= ammount * 2
-  end 
-
-  def damage(ammount)
-    @health -= ammount
+  def initialize(class_name)
+    self.class_name = class_name 
   end
 
 end
-
-binding.pry
