@@ -1,6 +1,0 @@
-require_relative 'dice.rb'
-require_relative 'weapon.rb'
-require_relative 'longsword.rb'
-require_relative 'character.rb'
-require_relative 'item.rb'
-require_relative 'create_character.rb'
